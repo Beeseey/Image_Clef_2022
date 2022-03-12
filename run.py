@@ -1,5 +1,6 @@
 import os, argparse
 from train import train_run
+from test import test_run
 
 
 
@@ -64,7 +65,7 @@ if __name__ == "__main__":
 
 	if args.mode == "test":
 		run = True
-		print("test")
+		test_run()
 	elif args.mode == "train":
 		run = True
 		train_filename = args.traincsv
