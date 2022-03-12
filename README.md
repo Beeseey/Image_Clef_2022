@@ -54,7 +54,7 @@ python run.py -mode train --traincsv ../../ImageCLEF2022/46bff9d5-95d4-4362-be98
 
 FOR CAPTION GENERATION
 
-python run.py -mode train --traincsv ../../ImageCLEF2022/cc3d9c72-6c2b-4bd3-9d10-4e133031be48_ImageCLEFmedCaption_2022_caption_prediction_valid.csv --imagepath ../../ImageCLEF2022/e229cc37-d0da-4356-bd5c-f119c63dfacc_ImageCLEFmedCaption_2022_valid_images/valid --valsplit 0.20 --model transformer --batchsize 20 --epochs 1 --data_type captions
+python run.py -mode train --traincsv ../../ImageCLEF2022/cc3d9c72-6c2b-4bd3-9d10-4e133031be48_ImageCLEFmedCaption_2022_caption_prediction_valid.csv --imagepath ../../ImageCLEF2022/e229cc37-d0da-4356-bd5c-f119c63dfacc_ImageCLEFmedCaption_2022_valid_images/valid --valsplit 0.20 --model transformer --batchsize 1 --epochs 1 --data_type captions
 
 
 Model results and configurations are saved in Results.txt
