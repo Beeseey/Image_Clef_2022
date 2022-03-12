@@ -22,10 +22,10 @@ def data_type(val):
 		raise argparse.ArgumentTypeError(msg)
 	return val
 
-def imagepath_findable(path):
+def path_findable(path):
 
 	if not os.path.exists(path):
-		msg = "image path does not exist"
+		msg = "path does not exist"
 
 		raise argparse.ArgumentTypeError(msg)
 	return path
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
 	parser.add_argument('-mode',type=mode_type)
 	parser.add_argument('--traincsv')
-	parser.add_argument('--imagepath',type=imagepath_findable)
+	parser.add_argument('--imagepath',type=path_findable)
 	parser.add_argument('--batchsize',default=1)
 	parser.add_argument('--epochs',default=10)
 	parser.add_argument('--model',type=model_type)
@@ -57,6 +57,7 @@ if __name__ == "__main__":
 	parser.add_argument('--classweight_hbar', default=1000)
 	parser.add_argument('--classweight_lbar', default = 0.05)
 	parser.add_argument('--data_type', type=data_type)
+	parser.add_argument('--model_path',type=path_findable)
 
 	args = parser.parse_args()
 
@@ -65,7 +66,7 @@ if __name__ == "__main__":
 
 	if args.mode == "test":
 		run = True
-		test_run()
+		test_run(args.model_path,)
 	elif args.mode == "train":
 		run = True
 		train_filename = args.traincsv

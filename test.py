@@ -1,5 +1,16 @@
 
 
-def test_run():
+def test_run(model):
 
-	print("test to be added")
+	print("still to add test procedure")
+
+	if model == "transformer":
+
+		load_weights = True
+
+
+def load_model(load_weights):
+
+	if load_weights:
+
+		print("loading weights")

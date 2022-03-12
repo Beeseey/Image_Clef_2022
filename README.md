@@ -19,15 +19,27 @@ C O D E      D O C U M E N T A T I O N
 
 ####for train
 [--traincsv] path to the training csv file with row 1 as header and subsequent rows having the format (image_id  concepts)
+
 [--imagepath] path to the images
+
 [--batchsize] batch size, default = 1
+
 [--epochs] epochs, default = 10
+
 [--model] name of model from model.py
+
 [--modeloutput] name of model output
+
 [--valsplit] validation split percentage, default = 0.25
+
 [--classweight_hbar] upper limit for class weights
+
 [--classweight_lbar] lower limit for class weights
+
 [--datatype] type of data passed into model
+
+[--model_path] path for model testing
+
 
 
 ---->> Example <<----
